@@ -6,7 +6,12 @@ export class Message {
     public currentDate: string;
     public currentTime: string;
 
-    constructor(nr: number, name: string, email: string, message: string, currentDate: string, currentTime: string) {
+    constructor(nr: number, 
+                name: string, 
+                email: string, 
+                message: string, 
+                currentDate: string, 
+                currentTime: string) {
         this.nr = nr;
         this.name = name;
         this.email = email;

@@ -7,6 +7,13 @@ import { MessageCreationComponent } from './message-creation/message-creation.co
 import { MessageListComponent } from './message-list/message-list.component';
 import { MessageEditComponent } from './message-list/message-edit/message-edit.component';
 
+import { Routes, RouterModule } from '@angular/router';
+
+const appRoutes: Routes = [
+  { path: '', component: MessageListComponent },
+  { path: 'edit', component: MessageEditComponent }
+];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +23,9 @@ import { MessageEditComponent } from './message-list/message-edit/message-edit.c
     MessageEditComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    // register 'appRoutes' within angular app
+    RouterModule.forRoot(appRoutes)  
   ],
   providers: [],
   bootstrap: [AppComponent]
